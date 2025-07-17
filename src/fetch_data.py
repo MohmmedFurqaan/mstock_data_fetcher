@@ -1,4 +1,4 @@
-import requests
+8import requests
 from config.config import API_KEY, PRIVATE_KEY
 from utils._token import get_access_token
 
@@ -12,7 +12,7 @@ def fetch_historical_data(symbol="TCS", interval="1d", range_="1mo"): # setted t
         print("Cannot proceed without access token.")
         return
 
-    url = "https://api.mstock.trade/v1/marketdata/historical"  # Confirm with actual API docs
+    url = "https://api.mstock.trade/v1/marketdata/historical"  # Api 
 
     headers = {
         "Authorization": f"token {API_KEY}:{access_token}",
@@ -45,7 +45,7 @@ def fetch_historical_data(symbol="TCS", interval="1d", range_="1mo"): # setted t
 
 
 if __name__ == "__main__":
-    # replace the symbols as per your requirnments .... as i don't know which stock u want
+    # replace the symbols as per your requirnments ....
     result = fetch_historical_data(symbol="TCS", interval="1d", range_="1mo")
     if result:
         print(result)
